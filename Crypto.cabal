@@ -1,0 +1,36 @@
+cabal-version: 2.4
+name: Crypto
+version: 1.0
+stability: experimental
+description:
+    Modules for Crypto 
+category: Cryptography
+x-ghc-framework-version: 8.6.4-13.14-2
+x-last-ide-version: HfM1.7.0
+data-files:
+    
+library
+    hs-source-dirs: lib
+    other-modules:
+        Readfile
+        SomeInputs
+        Basics
+        Symmetric
+    default-language: Haskell2010
+    build-depends:
+        crypto-api -any,
+        utf8-string -any,
+        bytestring -any,
+        split -any,
+        base -any,
+        base64-bytestring -any,
+        containers -any,
+        cryptonite -any,
+        text -any,
+        base16-bytestring -any
+
+executable main
+    main-is: Tutorial.hs
+    default-language: Haskell2010
+    build-depends:
+        base -any
